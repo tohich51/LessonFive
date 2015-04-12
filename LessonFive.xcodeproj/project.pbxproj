@@ -21,6 +21,10 @@
 		551B1E231ADA4D3400903560 /* TV.png in Resources */ = {isa = PBXBuildFile; fileRef = 551B1E1E1ADA4D3400903560 /* TV.png */; };
 		551B1E281ADAB39E00903560 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 551B1E271ADAB39E00903560 /* CustomTableViewCell.m */; };
 		551B1E2B1ADACF7A00903560 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551B1E2A1ADACF7A00903560 /* MenuViewController.m */; };
+		551B1E301ADAE33000903560 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551B1E2F1ADAE33000903560 /* UIKit.framework */; };
+		551B1E321ADAE33A00903560 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551B1E311ADAE33A00903560 /* Foundation.framework */; };
+		551B1E341ADAE34500903560 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551B1E331ADAE34500903560 /* CoreGraphics.framework */; };
+		551B1E361ADAE34E00903560 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551B1E351ADAE34E00903560 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		551B1E271ADAB39E00903560 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		551B1E291ADACF7A00903560 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		551B1E2A1ADACF7A00903560 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		551B1E2F1ADAE33000903560 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		551B1E311ADAE33A00903560 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		551B1E331ADAE34500903560 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		551B1E351ADAE34E00903560 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				551B1E361ADAE34E00903560 /* QuartzCore.framework in Frameworks */,
+				551B1E341ADAE34500903560 /* CoreGraphics.framework in Frameworks */,
+				551B1E321ADAE33A00903560 /* Foundation.framework in Frameworks */,
+				551B1E301ADAE33000903560 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +92,10 @@
 		551B1DE71ADA4A5800903560 = {
 			isa = PBXGroup;
 			children = (
+				551B1E351ADAE34E00903560 /* QuartzCore.framework */,
+				551B1E331ADAE34500903560 /* CoreGraphics.framework */,
+				551B1E311ADAE33A00903560 /* Foundation.framework */,
+				551B1E2F1ADAE33000903560 /* UIKit.framework */,
 				551B1E291ADACF7A00903560 /* MenuViewController.h */,
 				551B1E2A1ADACF7A00903560 /* MenuViewController.m */,
 				551B1E251ADAB35500903560 /* CustomCell */,

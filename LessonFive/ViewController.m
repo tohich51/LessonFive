@@ -28,6 +28,11 @@
     // Do any additional setup after loading the view, typically from a nib.
    
     self.mArrayDict = [NSMutableArray array];
+    if (self.isFirstArray)
+    {
+        [self makeFirstArray];
+    }
+    else [self makeAnotherArray];
     
     
 }
@@ -83,9 +88,7 @@
         
     }
     
-    //NSLog(@"%@",[NSString stringWithFormat:@"%@",self.mArray1]);
-    //выводим массив со словарем
-    NSLog(@"%@",[NSString stringWithFormat:@"%@",self.mArrayDict]);
+
 }
 - (void) makeAnotherArray{
     self.isFirstArray = NO;

@@ -7,7 +7,6 @@
 //
 
 #import "MenuViewController.h"
-
 @interface MenuViewController ()
 
 @property (strong, nonatomic) IBOutlet UIButton *button_First;
@@ -33,9 +32,11 @@
 -(void) go_First{
     //присваиваем объекту окошко из сториборда
     ViewController *view =  [self.storyboard instantiateViewControllerWithIdentifier:@"view"];
-    [self.navigationController pushViewController: view animated:(true)];//открываем окошко
-   
     
+    
+    
+    
+    [self.navigationController pushViewController: view animated:(true)];//открываем окошко
 } 
 -(void) go_Another{
     //присваиваем объекту окошко из сториборда
