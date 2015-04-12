@@ -14,6 +14,13 @@
 		551B1E011ADA4A5800903560 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 551B1E001ADA4A5800903560 /* Images.xcassets */; };
 		551B1E041ADA4A5800903560 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 551B1E021ADA4A5800903560 /* LaunchScreen.xib */; };
 		551B1E101ADA4A5800903560 /* LessonFiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 551B1E0F1ADA4A5800903560 /* LessonFiveTests.m */; };
+		551B1E1F1ADA4D3400903560 /* Car.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 551B1E191ADA4D3400903560 /* Car.jpg */; };
+		551B1E201ADA4D3400903560 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551B1E1B1ADA4D3400903560 /* DetailViewController.m */; };
+		551B1E211ADA4D3400903560 /* Flat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 551B1E1C1ADA4D3400903560 /* Flat.jpg */; };
+		551B1E221ADA4D3400903560 /* Mobile Phone.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 551B1E1D1ADA4D3400903560 /* Mobile Phone.jpg */; };
+		551B1E231ADA4D3400903560 /* TV.png in Resources */ = {isa = PBXBuildFile; fileRef = 551B1E1E1ADA4D3400903560 /* TV.png */; };
+		551B1E281ADAB39E00903560 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 551B1E271ADAB39E00903560 /* CustomTableViewCell.m */; };
+		551B1E2B1ADACF7A00903560 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551B1E2A1ADACF7A00903560 /* MenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +47,16 @@
 		551B1E091ADA4A5800903560 /* LessonFiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LessonFiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		551B1E0E1ADA4A5800903560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		551B1E0F1ADA4A5800903560 /* LessonFiveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LessonFiveTests.m; sourceTree = "<group>"; };
+		551B1E191ADA4D3400903560 /* Car.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Car.jpg; sourceTree = "<group>"; };
+		551B1E1A1ADA4D3400903560 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		551B1E1B1ADA4D3400903560 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		551B1E1C1ADA4D3400903560 /* Flat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Flat.jpg; sourceTree = "<group>"; };
+		551B1E1D1ADA4D3400903560 /* Mobile Phone.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Mobile Phone.jpg"; sourceTree = "<group>"; };
+		551B1E1E1ADA4D3400903560 /* TV.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TV.png; sourceTree = "<group>"; };
+		551B1E261ADAB39E00903560 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		551B1E271ADAB39E00903560 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		551B1E291ADACF7A00903560 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		551B1E2A1ADACF7A00903560 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +80,10 @@
 		551B1DE71ADA4A5800903560 = {
 			isa = PBXGroup;
 			children = (
+				551B1E291ADACF7A00903560 /* MenuViewController.h */,
+				551B1E2A1ADACF7A00903560 /* MenuViewController.m */,
+				551B1E251ADAB35500903560 /* CustomCell */,
+				551B1E241ADA4D4900903560 /* Detail View */,
 				551B1DF21ADA4A5800903560 /* LessonFive */,
 				551B1E0C1ADA4A5800903560 /* LessonFiveTests */,
 				551B1DF11ADA4A5800903560 /* Products */,
@@ -117,6 +138,29 @@
 				551B1E0E1ADA4A5800903560 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		551B1E241ADA4D4900903560 /* Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				551B1E191ADA4D3400903560 /* Car.jpg */,
+				551B1E1C1ADA4D3400903560 /* Flat.jpg */,
+				551B1E1D1ADA4D3400903560 /* Mobile Phone.jpg */,
+				551B1E1E1ADA4D3400903560 /* TV.png */,
+				551B1E1A1ADA4D3400903560 /* DetailViewController.h */,
+				551B1E1B1ADA4D3400903560 /* DetailViewController.m */,
+			);
+			name = "Detail View";
+			sourceTree = "<group>";
+		};
+		551B1E251ADAB35500903560 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				551B1E261ADAB39E00903560 /* CustomTableViewCell.h */,
+				551B1E271ADAB39E00903560 /* CustomTableViewCell.m */,
+			);
+			name = CustomCell;
+			path = LessonFive;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,9 +243,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				551B1E1F1ADA4D3400903560 /* Car.jpg in Resources */,
 				551B1DFF1ADA4A5800903560 /* Main.storyboard in Resources */,
+				551B1E211ADA4D3400903560 /* Flat.jpg in Resources */,
+				551B1E221ADA4D3400903560 /* Mobile Phone.jpg in Resources */,
 				551B1E041ADA4A5800903560 /* LaunchScreen.xib in Resources */,
 				551B1E011ADA4A5800903560 /* Images.xcassets in Resources */,
+				551B1E231ADA4D3400903560 /* TV.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,8 +268,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				551B1DFC1ADA4A5800903560 /* ViewController.m in Sources */,
+				551B1E2B1ADACF7A00903560 /* MenuViewController.m in Sources */,
 				551B1DF91ADA4A5800903560 /* AppDelegate.m in Sources */,
 				551B1DF61ADA4A5800903560 /* main.m in Sources */,
+				551B1E281ADAB39E00903560 /* CustomTableViewCell.m in Sources */,
+				551B1E201ADA4D3400903560 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +467,7 @@
 				551B1E151ADA4A5800903560 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		551B1E161ADA4A5800903560 /* Build configuration list for PBXNativeTarget "LessonFiveTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +476,7 @@
 				551B1E181ADA4A5800903560 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
