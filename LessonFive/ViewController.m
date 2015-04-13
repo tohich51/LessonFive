@@ -77,7 +77,7 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return self.mArray1.count;
+    return self.mArrayDict.count;
     
     
 }
