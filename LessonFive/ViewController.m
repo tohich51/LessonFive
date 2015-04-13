@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "DetailViewController.h"
+#import "makeArrays.h"
 
 @interface ViewController ()
 
@@ -19,6 +20,12 @@
 
 - (IBAction)backAction:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
+- (IBAction)first_ArrayAction:(id)sender;
+
+- (IBAction)another_ArrayAction:(id)sender;
+
 @end
 
 @implementation ViewController
@@ -28,11 +35,11 @@
     // Do any additional setup after loading the view, typically from a nib.
    
     self.mArrayDict = [NSMutableArray array];
+    
     if (self.isFirstArray)
-    {
         [self makeFirstArray];
-    }
-    else [self makeAnotherArray];
+    else
+        [self makeAnotherArray];
     
     
 }
@@ -42,76 +49,30 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) makeFirstArray{
+    self.isFirstArray = YES;
+    [self.mArrayDict removeAllObjects];
+    self.mArrayDict = [makeArrays makeFirstArray];
+    
+}
+-(void) makeAnotherArray{
+    self.isFirstArray = NO;
+    [self.mArrayDict removeAllObjects];
+    self.mArrayDict = [makeArrays makeAnotherArray];
+    
+}
 
 //=======================================================================
 
-- (void) makeFirstArray{
-    self.isFirstArray = YES;
-    [self.mArrayDict removeAllObjects];    
-   
-    
-    NSString *stringValue =@"Flat,TV,Mobile Phone,Car";
-    NSString *stringPrice =@"999,700,500,300";//выделяем память
-    
-    
-    NSString * stringDisFlat = @"Один из видов жилого помещения, состоящий из одной или нескольких смежных комнат с отдельным наружным выходом, составляющее отдельную часть дома.";
-    NSString * stringDisTv = @"Электронное устройство для приёма и отображения изображения и звука, передаваемых по беспроводным каналам или по кабелю (в том числе телевизионных программ или сигналов от устройств воспроизведения видеосигнала.";
-    NSString * stringDisMobile= @"Мобильный телефон, предназначенный для работы в сетях сотовой связи; использует приёмопередатчик радиодиапазона и традиционную телефонную коммутацию для осуществления телефонной связи на территории зоны покрытия сотовой сети.";
-    NSString * stringCarDis = @"Автотранспортное средство, в совокупности автотехника, автотранспорт — моторное безрельсовое дорожное транспортное средство минимум с 3 колёсами.";
-    
-    //заполняем изменяемые массивы
-    self.mArray1=[stringValue componentsSeparatedByString:@","];
-    self.mArray2=[stringPrice componentsSeparatedByString:@","];
-    //заполняем словарь
-    for (int i=0; i<self.mArray1.count;i++){
-        NSMutableDictionary *dict = [[NSMutableDictionary   alloc]init];
-        [dict setObject:[self.mArray1 objectAtIndex:i] forKey:@"value"];
-        [dict setObject:[self.mArray2 objectAtIndex:i] forKey:@"price"];
-        
-        NSString * value = [self.mArray1 objectAtIndex:i ];
-        //для каждого вида товара устанавливаем свое описания
-        if ([value isEqualToString:@"Flat"]) {
-            [dict setObject:stringDisFlat forKey:@"discr"];
-        }
-        else if ([value isEqualToString:@"TV"]){
-            [dict setObject:stringDisTv forKey:@"discr"];
-        }
-        else if ([value isEqualToString:@"Mobile Phone"]){
-            [dict setObject:stringDisMobile forKey:@"discr"];
-            
-        }
-        else if ([value isEqualToString:@"Car"]){
-            [dict setObject:stringCarDis forKey:@"discr"];
-        }
-        
-        [self.mArrayDict addObject:dict];
-        
-    }
-    
-
-}
-- (void) makeAnotherArray{
-    self.isFirstArray = NO;
-    [self.mArrayDict removeAllObjects];//освобождаем
-    
-
-    NSString * stringValue=@"Собака,Кошка,Крыса,Хомяк";
-    NSString * stringPrice=@"100,150,50,200,321";
-   
-    
-    self.mArray1=[stringValue componentsSeparatedByString:@","];
-    self.mArray2=[stringPrice componentsSeparatedByString:@","];
-    for (int i=0; i<self.mArray1.count;i++){
-        NSMutableDictionary *dict = [[NSMutableDictionary   alloc]init];
-        [dict setObject:[self.mArray1 objectAtIndex:i] forKey:@"value"];
-        [dict setObject:[self.mArray2 objectAtIndex:i] forKey:@"price"];
-        [self.mArrayDict addObject:dict];
-    }
-    
-}
-
 
 #pragma mark - UITableViewDelegate
+-(void) reloadTableView{
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationMiddle];
+    });
+    
+}
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -137,6 +98,8 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //метод для того что бы выделение строки в таблице пропадало
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     //присваиваем объекту окошко из сториборда
     DetailViewController *detail =  [self.storyboard instantiateViewControllerWithIdentifier:@"Detail"];
     //добавляем в словарь значение из массива с индексом строки
@@ -150,9 +113,20 @@
     
 }
 
-
 - (IBAction)backAction:(id)sender {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
+    
+}
+
+- (IBAction)first_ArrayAction:(id)sender {
+    [self makeFirstArray];
+    [self reloadTableView];
+ 
+}
+
+- (IBAction)another_ArrayAction:(id)sender {
+    [self makeAnotherArray];
+    [self reloadTableView];
     
 }
 @end

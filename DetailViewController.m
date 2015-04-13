@@ -10,6 +10,8 @@
 
 @interface DetailViewController ()
 
+- (IBAction)back:(id)sender;
+
 
 @end
 
@@ -47,4 +49,7 @@
 }
 */
 
+- (IBAction)back:(id)sender {
+     [self.navigationController popViewControllerAnimated:YES];
+}
 @end

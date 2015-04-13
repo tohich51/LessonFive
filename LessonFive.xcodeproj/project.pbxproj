@@ -25,6 +25,9 @@
 		551B1E321ADAE33A00903560 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551B1E311ADAE33A00903560 /* Foundation.framework */; };
 		551B1E341ADAE34500903560 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551B1E331ADAE34500903560 /* CoreGraphics.framework */; };
 		551B1E361ADAE34E00903560 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551B1E351ADAE34E00903560 /* QuartzCore.framework */; };
+		551B1E391ADBB96600903560 /* makeArrays.m in Sources */ = {isa = PBXBuildFile; fileRef = 551B1E381ADBB96600903560 /* makeArrays.m */; };
+		551B1E3D1ADC5B0A00903560 /* UIImage+BlurImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 551B1E3C1ADC5B0A00903560 /* UIImage+BlurImage.m */; };
+		551B1E3F1ADC5BDB00903560 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551B1E3E1ADC5BDB00903560 /* Accelerate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,11 @@
 		551B1E311ADAE33A00903560 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		551B1E331ADAE34500903560 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		551B1E351ADAE34E00903560 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		551B1E371ADBB96600903560 /* makeArrays.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = makeArrays.h; sourceTree = "<group>"; };
+		551B1E381ADBB96600903560 /* makeArrays.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = makeArrays.m; sourceTree = "<group>"; };
+		551B1E3B1ADC5B0A00903560 /* UIImage+BlurImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BlurImage.h"; sourceTree = "<group>"; };
+		551B1E3C1ADC5B0A00903560 /* UIImage+BlurImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BlurImage.m"; sourceTree = "<group>"; };
+		551B1E3E1ADC5BDB00903560 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				551B1E3F1ADC5BDB00903560 /* Accelerate.framework in Frameworks */,
 				551B1E361ADAE34E00903560 /* QuartzCore.framework in Frameworks */,
 				551B1E341ADAE34500903560 /* CoreGraphics.framework in Frameworks */,
 				551B1E321ADAE33A00903560 /* Foundation.framework in Frameworks */,
@@ -92,12 +101,16 @@
 		551B1DE71ADA4A5800903560 = {
 			isa = PBXGroup;
 			children = (
+				551B1E3E1ADC5BDB00903560 /* Accelerate.framework */,
+				551B1E3B1ADC5B0A00903560 /* UIImage+BlurImage.h */,
+				551B1E3C1ADC5B0A00903560 /* UIImage+BlurImage.m */,
 				551B1E351ADAE34E00903560 /* QuartzCore.framework */,
 				551B1E331ADAE34500903560 /* CoreGraphics.framework */,
 				551B1E311ADAE33A00903560 /* Foundation.framework */,
 				551B1E2F1ADAE33000903560 /* UIKit.framework */,
 				551B1E291ADACF7A00903560 /* MenuViewController.h */,
 				551B1E2A1ADACF7A00903560 /* MenuViewController.m */,
+				551B1E3A1ADBB96D00903560 /* makeArrays */,
 				551B1E251ADAB35500903560 /* CustomCell */,
 				551B1E241ADA4D4900903560 /* Detail View */,
 				551B1DF21ADA4A5800903560 /* LessonFive */,
@@ -177,6 +190,15 @@
 			);
 			name = CustomCell;
 			path = LessonFive;
+			sourceTree = "<group>";
+		};
+		551B1E3A1ADBB96D00903560 /* makeArrays */ = {
+			isa = PBXGroup;
+			children = (
+				551B1E371ADBB96600903560 /* makeArrays.h */,
+				551B1E381ADBB96600903560 /* makeArrays.m */,
+			);
+			name = makeArrays;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,7 +305,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				551B1E391ADBB96600903560 /* makeArrays.m in Sources */,
 				551B1DFC1ADA4A5800903560 /* ViewController.m in Sources */,
+				551B1E3D1ADC5B0A00903560 /* UIImage+BlurImage.m in Sources */,
 				551B1E2B1ADACF7A00903560 /* MenuViewController.m in Sources */,
 				551B1DF91ADA4A5800903560 /* AppDelegate.m in Sources */,
 				551B1DF61ADA4A5800903560 /* main.m in Sources */,
